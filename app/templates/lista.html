@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="page-header">
+    <h1>Lista de tarefa</h1>
+  </div>
+</div>
+<div class="row">
+  <table id="lista-tarefa" class="table table-striped">
+    <thead>
+      <tr>
+        <th>tarefa</th>
+        <th>data</th>
+        <th>concluido</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in itens" class="">
+        <td><strong>{{ item.taref }}</strong></td>
+        <td>{{ item.dia }}</td>
+        <td><input type="checkbox" ng-model="item.delete"></td>
+        <td><button class="btn btn-danger" ng-click="deletaItem(item.taref)">deletar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

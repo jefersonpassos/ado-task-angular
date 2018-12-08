@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lista de tarefa com AngularJS</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
+  <script src="app/module.js"></script>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Task PWA">
+  <link rel="apple-touch-icon" href="images/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+
+<body ng-app="myapp">
+  <div class="container" ng-controller="appcontroller">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1>Tarefas</h1>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="home">Lista de tarefas</a></li>
+          <li><a ui-sref="criar">Criar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div ui-view></div>
+  </div>
+</body>
+
+</html>
